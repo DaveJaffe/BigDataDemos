@@ -1,0 +1,13 @@
+GET / HTTP/1.1
+GET /favicon.ico HTTP/1.1
+GET /icons/apache_pb.gif HTTP/1.1
+GET /icons/poweredby.png HTTP/1.1
+GET /ds2 HTTP/1.1
+GET /ds2/index.html HTTP/1.1
+GET /ds2/dslogin.php?username=user15363&password=password HTTP/1.1
+GET /ds2/dsbrowse.php?customerid=1 HTTP/1.1
+GET /ds2/dspurchase.php?confirmpurchase=yes&customerid=18591&item%5B%5D=8466&quan%5B%5D=2&item%5B%5D=3572&quan%5B%5D=1&item%5B%5D=2165&quan%5B%5D=2 HTTP/1.1
+GET /ds2/dslogin.php?username=user6748&password=password HTTP/1.1
+GET /ds2/dsbrowse.php?browsetype=category&browse_category=5&browse_actor=&browse_title=&limit_num=8&customerid=6748 HTTP/1.1
+GET /ds2/dsnewcustomer.php?firstname=KPEVRG&lastname=THPLCVRTOE&address1=5702214697%20Dell%20Way&address2=&city=YAAHTDD&state=NH&zip=88445&country=US&email=THPLCVRTOE@dell.com&phone=5702214697 HTTP/1.1
+GET /ds2/dsbrowse.php?browsetype=category&browse_category=16&browse_actor=&browse_title=&limit_num=5&customerid=2000002 HTTP/1.1
