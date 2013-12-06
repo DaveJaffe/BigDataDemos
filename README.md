@@ -24,7 +24,6 @@ Because it is a MapReduce program the Log Generator is extremely scalable. A 1TB
 
 To run the program, create the input files and copy to an HFDS directory, then place the Class B IP address file and the referrer, request and user agent files in the local directory and:
 
-hadoop jar CreateWeblogs.jar CreateWeblogs –files all_classbs.txt,referrers.txt,requests.txt,user_agents.txt \
-  <HDFS input directory> <HDFS output directory>
+hadoop jar CreateWeblogs.jar CreateWeblogs –files all_classbs.txt,referrers.txt,requests.txt,user_agents.txt \<HDFS input directory> \<HDFS output directory>
 
 Files: CreateWeblogs.java, CreateWeblogsMapper.java, all_classbs.txt, referrers.txt, requests.txt, user_agents.txt
