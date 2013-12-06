@@ -23,7 +23,6 @@ GeoWeb MapReduce Program
 - MapReduce program to analyze Apache web logs, producing counts per country per hour
 - Files: GeoWeb.java, GeoWebMapper.java, SumReducer.java, all_classbs.txt
 - See GeoWeb_readme.md
-- 
 
 GeoWeb Hive Script
 - Hive script to analyze Apache web logs, producing counts per country per hour
