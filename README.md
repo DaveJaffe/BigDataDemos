@@ -20,9 +20,13 @@ The web request (such as a GET command), referrer (referring web site if present
 
 Implemented as a Map-only MapReduce program, the program reads input files with lines containing the year, month, day and number of web accesses per day, and creates a file in the specified output HDFS directory with the name access_logs-yyyymmdd, containing that number of web accesses.
 
+As an example, if the input files contain 366 lines of the form
+yyyy mm dd 11900000
+then 366 web log files totaling 1TB will be created. The number of map tasks employed will be equal to the number of input files.
+
 Because it is a MapReduce program the Log Generator is extremely scalable. A 1TB set of web logs was generated in 10 minutes on a 20-datanode cluster.
 
-To run the program, create the input files and copy to an HFDS directory, then place the Class B IP address file and the referrer, request and user agent files in the local directory and:
+Compile the program as a standard Hadoop jar file. To run the program, create the input files and copy to an HFDS directory, then place the Class B IP address file and the referrer, request and user agent files in the local directory and:
 
 hadoop jar CreateWeblogs.jar CreateWeblogs –files all_classbs.txt,referrers.txt,requests.txt,user_agents.txt \<HDFS input directory> \<HDFS output directory>
 
