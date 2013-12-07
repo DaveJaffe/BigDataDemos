@@ -27,9 +27,9 @@ GeoWeb MapReduce Program
 GeoWeb Hive Script
 - Hive script to analyze Apache web logs, producing counts per country per hour
 - Files: geoweb.q, all_classbs.txt
-- See GeoWeb_Hive_readme.md
+- See GeoWeb_readme.md
 
 GeoWeb Pig Script
 - Pig script to analyze Apache web logs, producing counts per country per hour
 - Files: geoweb.pig, all_classbs.txt
-- See GeoWeb_Pig_readme.md
+- See GeoWeb_readme.md
