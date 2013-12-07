@@ -28,7 +28,7 @@ WITH SERDEPROPERTIES (
 )
 stored as textfile
 -- Location of access logs to be analyzed
-location '/user/root/weblogs/access_logs_1TB';
+location '/user/test/weblogs/access_logs_1TB';
 
 --read file containing all class B IP addresses and country (eg: 184.78 US)
 DROP TABLE classbs;
@@ -38,7 +38,7 @@ CREATE EXTERNAL TABLE classbs (
 row format delimited
 fields terminated by ' '
 stored as textfile
-location '/user/root/weblogs/classbs';
+location '/user/test/weblogs/classbs';
 
 -- Create temporary table with first two octets of host IP and hour 
 DROP TABLE t2; 
