@@ -5,6 +5,7 @@ Demo programs for Hadoop etc.
 
 Dave Jaffe 
 dave_jaffe@dell.com
+@davejaffe7
 
 
 GeoWeb Apache Log Generator and Analysis Tools
