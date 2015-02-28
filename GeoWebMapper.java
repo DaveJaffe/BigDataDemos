@@ -3,9 +3,9 @@ GeoWebMapper.java: mapper for GeoWeb application
 
 Last Updated 10/17/13
 
-Dave Jaffe, Dell Solution Centers
+Dave Jaffe
 
-Distributed under Creative Commons with Attribution by Dave Jaffe (dave_jaffe@dell.com).  
+Distributed under Creative Commons with Attribution by Dave Jaffe (davejaffe7@gmail.com).  
 Provided as-is without any warranties or conditions.
 
 See documentation in GeoWeb.java driver program

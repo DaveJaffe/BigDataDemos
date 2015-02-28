@@ -1,13 +1,13 @@
 -- geoweb.q: Hive commands to analyze Apache web logs for location and hour
 -- Last Updated 11/1/13
--- Dave Jaffe, Dell Solution Centers
--- Distributed under Creative Commons with Attribution by Dave Jaffe 
--- (dave_jaffe@dell.com).  Provided as-is without any warranties or conditions.
+-- Distributed under Creative Commons with Attribution by Dave Jaffe (davejaffe7@gmail.com)
+-- Provided as-is without any warranties or conditions
 
-ADD JAR /usr/lib/hive/lib/hive-contrib-0.9.0-Intel.jar; 
+-- Change if necessary
+ADD JAR /usr/lib/hive/lib/hive-contrib.jar; 
 
 -- specify number of reduce tasks
-SET mapred.reduce.tasks=200; 
+SET mapred.reduce.tasks=20; 
 
 -- read web logs with Regex serde
 DROP TABLE weblogs;
@@ -28,7 +28,7 @@ WITH SERDEPROPERTIES (
 )
 stored as textfile
 -- Location of access logs to be analyzed
-location '/user/test/weblogs/access_logs_1TB';
+location '/user/test/weblogs/access_logs';
 
 --read file containing all class B IP addresses and country (eg: 184.78 US)
 DROP TABLE classbs;

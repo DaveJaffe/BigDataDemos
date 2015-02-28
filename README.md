@@ -18,7 +18,7 @@ See whitepaper, Three Approaches to Data Analysis with Hadoop, at http://en.comm
 GeoWeb Apache Log Generator 
 - MapReduce program to generate large volumes of realistic Apache web logs
 - Files: CreateWeblogs.java, CreateWeblogsMapper.java, all_classbs.txt, referrers.txt, requests.txt, user_agents.txt
-- See ApacheWebLogGenerator_readme.md
+- See GeoWebApacheWebLogGenerator_readme.md
 
 GeoWeb MapReduce Program
 - MapReduce program to analyze Apache web logs, producing counts per country per hour

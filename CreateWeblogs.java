@@ -3,9 +3,9 @@ CreateWeblogs.java: CreateWeblogs application driver
  
 Last Updated 10/29/13
 
-Dave Jaffe, Dell Solution Centers
+Dave Jaffe
 
-Distributed under Creative Commons with Attribution by Dave Jaffe (dave_jaffe@dell.com).  
+Distributed under Creative Commons with Attribution by Dave Jaffe (davejaffe7@gmail.com).  
 Provided as-is without any warranties or conditions.
 
 Creates Apache web logs using map-only program, CreateWeblogsMapper.java
