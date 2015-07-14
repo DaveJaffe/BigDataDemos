@@ -34,3 +34,8 @@ GeoWeb Pig Script
 - Pig script to analyze Apache web logs, producing counts per country per hour
 - Files: geoweb.pig, all_classbs.txt
 - See GeoWeb_readme.md
+
+GeoWeb Spark Program
+- Spark program to analyze Apache web logs, producing counts per country per hour
+- Files: geoweb.py, all_classbs.txt
+- See GeoWeb_readme.md
