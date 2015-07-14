@@ -34,3 +34,15 @@ hadoop fs -cat /user/test/weblogs/w_pig_out/part* | sed 's/\t//' | sort > result
 
 
 All 3 results files should be identical for same input logs
+
+Added 7/13/15:
+
+Spark:
+- Files: geoweb.py, all_classbs.txt
+- Example invocations:
+local filesystem:
+spark-submit geoweb.py access_logs all_classbs.txt results_spark
+HDFS:
+spark-submit geoweb.py hdfs://namenode.example.com:8020/user/test/weblogs/access_logs hdfs://namenode.example.com:8020/user/test/weblogs/classbs/all_classbs.txt results_spark
+
+Results file should be same as other 3 programs for same input logs
