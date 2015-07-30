@@ -1,7 +1,7 @@
 """
 geoweb.py: Spark program to analyze Apache web logs, counting hits by country and hour
 
-Last Updated 7/13/15
+Last Updated 7/29/15
 
 Distributed under Creative Commons with Attribution by Dave Jaffe (davejaffe7@gmail.com)
 Provided as-is without any warranties or conditions
@@ -18,10 +18,12 @@ To run: spark-submit geoweb.py <access log directory> all_classbs.txt result_fil
   and result_file is file with number of clicks in logs per country per hour
 
 Sample invocations:
-local filesystem:
-spark-submit geoweb.py access_logs all_classbs.txt spark_output
-HDFS:
+Input data on local filesystem:
+spark-submit --conf spark.ui.port=4041 geoweb.py access_logs all_classbs.txt spark_output
+Input data on HDFS from remote driver:
 spark-submit geoweb.py hdfs://namenode.example.com:8020/user/test/weblogs/access_logs hdfs://namenode.example.com:8020/user/test/weblogs/classbs/all_classbs.txt spark_output
+Input data on HDFS from node which is part of Hadoop cluster:
+HADOOP_CONF_DIR=/etc/hadoop/conf spark-submit --master yarn --num-executors 3 geoweb.py /user/test/weblogs/access_logs /user/test/weblogs/classbs/all_classbs.txt spark_output
 
 This product includes GeoLite data created by MaxMind, available from http://www.maxmind.com
 
@@ -88,10 +90,9 @@ def parseLogs(sc, logFile):
 # geoweb.py main program starts here
 
 import sys
-from pyspark import SparkConf, SparkContext
+from pyspark import SparkContext
 
-conf = SparkConf().setMaster("local").setAppName("geoweb").set("spark.ui.port", "4041")
-sc = SparkContext(conf = conf)
+sc = SparkContext()
 if len(sys.argv) != 4:
   print "Syntax: spark-submit geoweb.py <access log directory> all_classbs.txt result_file"
   sys.exit()
